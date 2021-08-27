@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+ 
+ #home,
+.products,
+.reports,
+.footer
+ {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 90vh;
+  
 }
 
-.App-link {
-  color: #61dafb;
-}
+.slider{
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+}
+.image{
+  width: 1270px;
+  height: 440px;
+  border-radius: 10px;
+}
+.right-arrow{
+  position: absolute;
+  top: 50%;
+  right: 270px;
+  font-size: 2rem;
+  color: #414757;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+  transform: translate(-50%,-50%);
+  opacity: .1;
+  display: none;
+}
+.left-arrow{
+  position:absolute;
+  top: 50%;
+  left: 270px;
+  font-size: 2rem;
+  color: #414757;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+  transform: translate(-50%,-50%);
+  opacity: .1;
+  display: none;
+}
+@media screen and (max-width: 576px) {
+  .right-arrow{
+    opacity:.6;
+    position: absolute;
+    top: 35%;
+    right: 80px;
   }
-  to {
-    transform: rotate(360deg);
+  .left-arrow{
+    opacity: .4;
+    position: absolute;
+    top: 35%;
+    left: 50px;
   }
+  .image{
+    width: 100%;
+    height: 250px
+  }
+
+ 
 }
